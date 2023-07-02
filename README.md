@@ -83,7 +83,9 @@ I used clutter removal between the simulated x_e and x_r signals in the range re
 
 
 # References
+
 [1] Mateusz Malanowski, Signal Processing for Passive Bistatic Radar, Artech, 2019.
+
 [2] K. Abratkiewicz, A. Księżyk, M. Płotka, P. Samczyński, J. Wszołek and T. P. Zieliński, "SSB-Based 
 Signal Processing for Passive Radar Using a 5G Network," in IEEE Journal of Selected Topics in Applied 
 Earth Observations and Remote Sensing, vol. 16, pp. 3469-3484, 2023
