@@ -81,6 +81,8 @@ I used clutter removal between the simulated x_e and x_r signals in the range re
 ![image](https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/98d4807f-1f9d-43ab-956e-7f4aba07a314)
 ![image](https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/660d786b-1d0d-4fed-8df0-8ecee56d4859)
 
+# Next Steps
+Now that the clutter has been removed, for this test example, we can notice that there is a decent ability to detect targets. However, it's not quite useful to have someone visually looking at the graphs themselves, and in noisier scenarios, the clutter will be difficult to denote purely visually. In these cases, we should apply estimation techniques to indicate the detection of targets. A constant false alarm rate detector would work well for this, and other adaptive estimation techniques for radar detection are also possible. Following detection, bistatic localization and tracking algorithms would be used to denote the position of the objects detected, using the eliptical geometry of a radio wave traveling between the reference antenna and the transmit antenna.
 
 # References
 
