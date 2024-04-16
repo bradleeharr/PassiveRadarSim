@@ -7,6 +7,21 @@ be called passive bistatic radar, passive covert radar, or passive coherent loca
 Passive radar can have several applications. Some uses for short range passive radar include detecting 
 vehicles or smuggler drones in border areas detecting flying objects in the vicinity of small airports [2] 
 
+
+# Quick Start: 
+If you want to record your own signals, you can use an RTL-SDR as in Figure 1. 
+
+<h3> Figure 1: Flowgraph collecting data from 104.1 MHz channel </h3>
+<p align="center">
+
+<img src="https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/31bb5cf2-b75d-4f61-bc6c-5d8c7ca303f9" width=700>
+</p>
+
+If you have a SigMF signal, these can be processed as follows (Flowgraph is https://github.com/bradleeharr/PassiveRadarSim/blob/main/FM_radio_example.grc): 
+<p align="center">
+<img src="https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/394a294b-1523-46df-830f-a527a8db3f10" width=700>
+</p>
+
 # FM Radio: Waveform Analysis
 FM Radio is the transmitter I chose to cover due to the strong signal power used in the 
 transmitters and the continuous operation of several stations making it very available and accessible.
@@ -18,9 +33,6 @@ The data was collected using GNU Radio with an RTL-SDR block and file sink that 
 characters with real and imaginary components interleaved. The setup and results can be seen in Figure 
 1 and 2
 
-<h3> Figure 1: Flowgraph collecting data from 104.1 MHz channel </h3>
-
-![image](https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/31bb5cf2-b75d-4f61-bc6c-5d8c7ca303f9)
 
 <h3> Figure 2: Histogram and frequency content of samples collected for 104.1 MHz channel </h3>
 
