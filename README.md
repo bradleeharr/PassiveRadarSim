@@ -41,9 +41,9 @@ characters with real and imaginary components interleaved. The setup and results
 I used a sample rate of 2.4 MS/s, which included frequency content from other channels. To reduce interference from other channels, I passed the data through a Hamming window low-pass filter with an order of 30 and cutoff frequency 480 kHz. To compare the signals, the frequency and autocorrelation response for one second of data, can be seen in Figure 3.
 
 <h3> Figure 3: Frequency Response and Autocorrelation Response for 2 seconds of data from stations at 100.4 MHz, 102.7 MHz, and 104.1 MHz </h3>
-
-![image](https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/9ac72b26-2ba6-4918-a1a2-c8f48b59e4fa)
-
+<p align="center">
+<img src="https://github.com/bradleeharr/PassiveRadarSim/assets/56418392/9ac72b26-2ba6-4918-a1a2-c8f48b59e4fa">
+</p>
 The frequency response of the three signals are similar, as they are all high-quality FM broadcasts. In comparison to the others, the 102.7 MHz channel has the narrowest bandwidth, and has worse sidelobes in the autocorrelation response than the other channels, so it is likely not ideal for a radar waveform. The 104.1 MHz channel has decent bandwidth and the sidelobes in the autocorrelation response at ±20μs lag are -30 dB, which is significantly good performance. The 100.5 MHz channel has even better peak-to-sidelobe response of -31.5 dB at ±17.5μs lag.
 
 It is important to note that these measurements only correspond to a single instant of time, and due to the nature of the broadcasts’ constantly changing signal content, this does not fully represent the capability of the overall broadcast.
