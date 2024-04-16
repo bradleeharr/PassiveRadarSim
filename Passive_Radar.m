@@ -2,8 +2,12 @@ clear; close all; clc;
 %addpath('../folder_x/');
 
 % Input : Which data to load and use from what channel
-chann_no = 0;
+chann_no = -1;
 switch(chann_no)
+    case -1
+        radio_station = 'FM France 96_9.dat';
+        fileID = fopen('96_9.dat', 'r');
+        fc = 96.9e6;
     case 0
         radio_station = '93.3 MHz';
         fileID = fopen('93_3.dat', 'r');
@@ -32,7 +36,7 @@ num_steps = 30; % Number of CPI Steps
 BWs_list = zeros(1,num_steps); % List of 3db bandwidths
 
 % inc: How many cpis to run
-for inc = 1:100
+for inc = 1:5
     % Take CPI worth of data from data_0 
     data = data_0(1+(inc-1)*cpi:cpi+(inc-1)*cpi);
 
@@ -80,7 +84,7 @@ for inc = 1:100
     t = (0:1/Fs_d:T-1/Fs_d).'; % Time vector
     xr_delayed = [zeros(d, 1); xr(1:end-d)]; % Delay
     xr_doppler = xr_delayed .* exp(1i*2*pi*f_d*t); % Doppler shift
-    attenuation = 0.05;
+    attenuation = 0.3;
     xe = xr + xr_doppler*attenuation; 
 
     %%%
@@ -115,13 +119,13 @@ for inc = 1:100
     % Plot Self-Ambiguity Function
     psi_self = cross_ambiguity(xr, xr, max_lag, Fs_d, lambda, inc, 10);
     title(['Self Ambiguity Function for Channel ' num2str(radio_station)]);
-    caxis([85 100]);
+    caxis([50 100]);
     xlim([-150 250]);
     ylim([0 40]);
     % Plot Cross Ambiguity Function without Least Squares Clutter Filtering
     psi_1 = cross_ambiguity(xr, xe, max_lag, Fs_d, lambda, inc, 11);
     title(['Cross Ambiguity Function for Channel ' num2str(radio_station) ' for \alpha = ' num2str(attenuation)]);
-    caxis([85 100]);
+    caxis([50 100]);
     xlim([-150 250]);
     ylim([0 40]);
     % Plot Cross Ambiguity Function with Least Squares Clutter Filtering
