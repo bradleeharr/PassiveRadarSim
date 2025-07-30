@@ -2,10 +2,10 @@
 Project for Radar Signal Processing - Passive Radar Simulation from RTL-SDR FM Data
 # Description
 The purpose of this project is to explore the steps of passive radar signal processing. A passive radar, as 
-described by [1], is a radar that relies on a transmitter external to its own system. This kind of radar can 
+described by [[1]](#signal_processing_bistatic_radar) , is a radar that relies on a transmitter external to its own system. This kind of radar can 
 be called passive bistatic radar, passive covert radar, or passive coherent location.
 Passive radar can have several applications. Some uses for short range passive radar include detecting 
-vehicles or smuggler drones in border areas detecting flying objects in the vicinity of small airports [2] 
+vehicles or smuggler drones in border areas detecting flying objects in the vicinity of small airports [[2]](#ssb_based_signal_processing)
 
 
 # Quick Start: 
@@ -113,9 +113,10 @@ Now that the clutter has been removed, for this test example, we can notice that
 However, it's not quite useful to have someone visually looking at the graphs themselves, and in noisier scenarios, the clutter will be difficult to denote purely visually. In these cases, we should apply estimation techniques to indicate the detection of targets. A constant false alarm rate detector would work well for this, and other adaptive estimation techniques for radar detection are also possible. Following detection, bistatic localization and tracking algorithms would be used to denote the position of the objects detected, using the eliptical geometry of a radio wave traveling between the reference antenna and the transmit antenna.
 
 # References
+<a name="signal_processing_bistatic_radar"></a>
+[1]: Mateusz Malanowski, Signal Processing for Passive Bistatic Radar, Artech, 2019.
 
-[1] Mateusz Malanowski, Signal Processing for Passive Bistatic Radar, Artech, 2019.
-
+<a name="ssb_based_signal_processing"></a>
 [2] K. Abratkiewicz, A. Księżyk, M. Płotka, P. Samczyński, J. Wszołek and T. P. Zieliński, "SSB-Based 
 Signal Processing for Passive Radar Using a 5G Network," in IEEE Journal of Selected Topics in Applied 
 Earth Observations and Remote Sensing, vol. 16, pp. 3469-3484, 2023
